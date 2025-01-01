@@ -57,6 +57,11 @@ header::before{
     
     
 }
+@media (max-width: 991px){
+    .logo{
+        font-size: 1rem;
+    }
+}
 .logo1{
     
     
@@ -382,6 +387,7 @@ header::before{
 @media (max-width: 991px){
     .wrapper{
         right: 5%;
+        
     }
 }
 .contenedor-wrapper {
