@@ -73,7 +73,7 @@ header::before{
     position: fixed;
     bottom: 50px;
     right: 80px;
-    font-size: 100px;
+    font-size: clamp(24px, 4vw + 1rem, 100px);
     z-index: 100000;
     
 } 
@@ -87,7 +87,7 @@ header::before{
 }
 .boton-modal label:hover{
     color: #ccc6c6;
-    font-size: 150px;
+    font-size: clamp(24px, 4vw + 1rem, 150px);
     transition: 300ms ease;
 }
 #btn-modal{
@@ -231,6 +231,7 @@ header::before{
         overflow: hidden;
         transition: .3s ease;
     }
+    
     #check:checked~.menu-horizontal{
         height: 17.7rem;
     }
@@ -245,7 +246,9 @@ header::before{
     .btnLogin-popup{
         position: absolute;
         right: 15%;
+        display: none;
     }
+    
     
 
     
@@ -299,7 +302,7 @@ header::before{
 }
 .menu-vertical{
     
-    position: absolute;
+    position:absolute ;
 	display: none ;
 	list-style: none;
 
@@ -326,6 +329,7 @@ header::before{
 .menu-vertical li a:hover{
     color: #6e6c6c;
 }
+
 .wrapper{
     position: fixed;
     top: 30%;
@@ -574,18 +578,18 @@ header::before{
    
 }
 .home .content h3{
-    font-size: 4rem;
+    font-size: clamp(24px, 4vw + 1rem, 48px);
     text-transform: uppercase;
     color: #fff;
     line-height: 1.4;
     
 
 
-}.home .content p{
-    font-size: 2rem;
+}.home .content h2{
+    font-size: clamp(15px, 4vw + 1rem, 30px);
     font-weight: lighter;
     line-height: 1.8;
-    padding: 1rem 0;
+    padding: 20px 0;
     color: #eee;
 }
 
@@ -601,7 +605,7 @@ header::before{
     outline: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     color: #fff;
     font-weight: 500;
     margin-left: 0px;
@@ -609,6 +613,7 @@ header::before{
 }
 .home .button-ex{
     display: inline-flex;
+
 }
 .home .btnstar:hover{
     background-color: #fff;
