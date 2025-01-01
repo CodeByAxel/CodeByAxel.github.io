@@ -92,7 +92,14 @@ header::before{
 }
 @media (max-width: 991px){
     .boton-modal{
+        position: fixed;
         font-size: 60px;
+        bottom: 5px;
+        right: 5px;
+    }
+    .boton-modal:hover{
+        position: fixed;
+        font-size: 90px;
         bottom: 5px;
         right: 5px;
     }
