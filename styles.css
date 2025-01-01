@@ -210,6 +210,7 @@ header::before{
 @media (max-width: 992px){
     header{
         padding: 1.3rem 5%;
+        max-height: 60px;
     }
 }
 @media (max-width: 991px){
@@ -258,7 +259,18 @@ header::before{
     .btnLogin-popup{
         position: absolute;
         right: 15%;
-        display: none;
+        max-width: 50px;
+        margin-right: 20px;
+        
+        
+        
+    }
+    .btnLogin-popup span{
+         display: none;
+        
+    }
+    .btnLogin-popup .fa-circle-user{
+        margin-left: 5px;
     }
     
     
@@ -312,6 +324,9 @@ header::before{
     background-color: #fff;
     color: #162938;
 }
+.btnLogin-popup .fa-circle-user{
+    margin-right: 5px;
+}
 .menu-vertical{
     
     position:absolute ;
@@ -344,7 +359,7 @@ header::before{
 
 .wrapper{
     position: fixed;
-    top: 30%;
+    top:20%;
     right: 40%;
     width: 90%;
     max-width: 400px;
@@ -363,6 +378,11 @@ header::before{
     transition: transform .5s ease, height .2s ease;
     z-index: 200;
     flex-direction: column;
+}
+@media (max-width: 991px){
+    .wrapper{
+        right: 5%;
+    }
 }
 .contenedor-wrapper {
     position: relative; /* Contexto para elementos hijos */
@@ -638,10 +658,21 @@ header::before{
     color: #162938;
 }
 @media (max-width: 900px) {
+    .home{
+    
+    display: flex;
+    /* Coloca elementos en columna */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
     .home .content {
         padding: 15px;
+        align-items: center;
+        text-align: center;
         
     }
+    
 
     .home .content h3 {
         font-size: 1.8rem;
@@ -655,6 +686,7 @@ header::before{
         width: 150px;
         height: 60px;
         font-size: 1rem;
+        margin: 0px 4px;
     }
    
 }
