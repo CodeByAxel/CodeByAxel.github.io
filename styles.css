@@ -645,20 +645,20 @@ header::before{
     width: 800px;
 }
 .chatbot .content h1{
-    font-size: 2.4rem;
+    font-size: clamp(24px, 4vw + 1rem, 48px);
     text-transform: uppercase;
     color: #fff;
     line-height: 1.4;
 }
 .chatbot .content p{
-    font-size: 1.3rem;
+    font-size: clamp(15px, 4vw + 1rem, 30px);
     font-weight: lighter;
     line-height: 1.8;
     padding: 1rem 0;
     color: hsl(0, 0%, 85%);
 }
 .chatbot .content h4{
-    font-size: 1.4rem;
+    font-size: clamp(10px, 4vw + 1rem, 20px);
      color: rgb(173, 154, 154)
 
 }
