@@ -93,8 +93,8 @@ header::before{
 @media (max-width: 991px){
     .boton-modal{
         font-size: 60px;
-        bottom: 15px;
-        right: 15px;
+        bottom: 5px;
+        right: 5px;
     }
 }
 
