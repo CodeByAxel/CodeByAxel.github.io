@@ -90,6 +90,13 @@ header::before{
     font-size: clamp(10px, 4vw + 1rem, 150px);
     transition: 300ms ease;
 }
+@media (max-width: 991px){
+    .boton-modal{
+        font-size: 30px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
 #btn-modal{
     display: none;
 }
