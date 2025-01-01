@@ -13,21 +13,37 @@ body{
     background-position: center;
 }
 section {
-    width: 100%; /* Cada sección ocupa todo el ancho */
-/* Separación entre secciones */
+    width: 100%; /* Ocupa todo el ancho */
+    
+}
+section .content{
+    max-width: 1200px; /* Limita el ancho máximo */
+    width: 100%; /* Se adapta al contenedor */
 }
 header{
-    display: flex;
+    
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 288px;
+    padding: 1.3rem 10%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     z-index:100;
 
+
+}
+header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0 ,0 , .1);
+    backdrop-filter: blur(10px);
+    z-index: -1;
 }
 .logo{
     display: flex; /* Activa flexbox */
@@ -154,6 +170,8 @@ header{
     list-style: none;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    
 }
 
 .menu-horizontal a{
@@ -166,9 +184,76 @@ header{
     margin-left: 40px;
     
 }
+#check{
+    display: none;
+}
+.icons{
+    right: 5%;
+    position: absolute;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 992px){
+    header{
+        padding: 1.3rem 5%;
+    }
+}
+@media (max-width: 991px){
+    .icons{
+        display: inline-flex;
+    }
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+    .icons #close-icon{
+       display: none; 
+
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+    .menu-horizontal{
+        
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height:0;
+        background-color: rgba(0, 0, 0, 0.123);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0 ,0 , .1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+    #check:checked~.menu-horizontal{
+        height: 17.7rem;
+    }
+    .menu-horizontal a{
+        display: block;
+
+        font-size: 1.1rem;
+        margin:1.5rem 0;
+        text-align: center;
+        
+    }
+    .btnLogin-popup{
+        position: absolute;
+        right: 15%;
+    }
+    
+
+    
+}
 .menu-horizontal i{
     margin-left: 10px;
     color: rgb(255, 255, 255);
+    
     
 }
 
@@ -193,24 +278,22 @@ header{
 .menu-horizontal a:hover:after{
     transform: scaleX(1);
 }
-.menu-horizontal .btnLogin-popup{
-    right:130px;
-    top: 21px;
-    position: absolute;
+.btnLogin-popup{
+    
     width: 130px;
     height: 50px;
     background: transparent;
-    border: 4px solid #fff;
+    border: 4px solid #ffffff;
     outline: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 1.1em;
     color: #fff;
     font-weight: 500;
-    margin-left: 40px;
     transition: .5s ease;
+    margin-left: 10px;
 }
-.menu-horizontal .btnLogin-popup:hover{
+.btnLogin-popup:hover{
     background-color: #fff;
     color: #162938;
 }
@@ -245,10 +328,11 @@ header{
 }
 .wrapper{
     position: fixed;
-    left: 40%;
     top: 30%;
-    width: 400px;
-    height: 440px;
+    right: 40%;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
     transform: translate(-50%, -50%);
     background: #ffffff8f;
     border: 2px solid rgba(255, 255, 255, .5);
@@ -261,8 +345,19 @@ header{
     overflow: hidden;
     transform: scale(0);
     transition: transform .5s ease, height .2s ease;
-    z-index: 99;
+    z-index: 200;
+    flex-direction: column;
 }
+.contenedor-wrapper {
+    position: relative; /* Contexto para elementos hijos */
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura del viewport */
+    display: flex; /* Flexbox para centrar elementos */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    overflow: hidden; /* Evita que elementos hijos salgan del contenedor */
+}
+
 
 .wrapper.active-popup{
     display: flex;
@@ -519,6 +614,7 @@ header{
     background-color: #fff;
     color: #162938;
 }
+
 .chatbot{
     position: relative;
     display: flex;
