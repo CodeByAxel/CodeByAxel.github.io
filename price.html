@@ -6,51 +6,143 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add" />
     <link href="styles.css" rel="stylesheet"/>
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico"/>
     <title>Price</title>
 </head>
 <body>
-    <header class="content-header">
-        <a class="logo" href="index.html">
-            <img class="logo1" src="logo-removebg-preview.png" alt="Logo">
-            <span>Legalicity</span>
-        </a>
-        <input type="checkbox" id="check">
-        <label for="check" class="icons">
-            <i class="fa-solid fa-bars" id="menu-icon"></i>
-            <i class="fa-solid fa-xmark" id="close-icon"></i>
-        </label>
+    <nav class="nav">
         
-        
-        <nav class="menu-horizontal">
-            <li><a href="#">Negocios<i class="fa-solid fa-chevron-up"></i></a>
-                <ul class="menu-vertical">
-                    <li><a href="#">Autonomos</a></li>
-                    <li><a href="#">Pymes</a></li>
-                    <li><a href="#">Gestorias <br/>& Asesorias</a></li>
-                </ul> 
-            </li>             
-            <li><a href="#">funcionalidades<i class="fa-solid fa-chevron-up"></i></a>
-                <ul class="menu-vertical">
-                    <li><a href="#">Facturas</a></li>
-                    <li><a href="#">Presupuestos</a></li>
-                    <li><a href="#">Enviar ticket</a></li>
-                </ul>
-            </li> 
-            <li><a href="#">Precios</a></li>
-            <li><a href="#">Recursos<i class="fa-solid fa-chevron-up"></i></a>  
-                <ul class="menu-vertical">
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Plantillas Facturas</a></li>
-                    <li><a href="#">Asesor IA</a></li>
-                </ul>
-            </li>
-            
+        <div class="nav__container">
+            <img src="logo-removebg-preview.png" class="logito" alt="Logo">
+            <a href="index.html"  class="nav__title"> Legalicity</a>
+            <button class="btnLogin-popup"><i class="fa-regular fa-circle-user"></i><span>Login</span></button>
 
-        </nav>
+            <label class="icons" for="menu-toggle">
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+                <i class="fa-solid fa-xmark" id="close-icon" style="display: none;"></i>
+            </label>
 
-        <button class="btnLogin-popup"><i class="fa-regular fa-circle-user"></i><span>Login</span></button>
-    </header>
+
+            <input type="checkbox" id="menu-toggle" hidden>
+            <ul class="dropdown" id="menu" aria-label="Menú principal">
+
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        
+                        <i class="fa-solid fa-house"></i>
+                        <span class="dropdown__span">Inicio</span>
+                    </a>
+                
+                </li>
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        
+                        <span class="dropdown__span">Negocios</span>
+                        
+                        <i class="fa-solid fa-chevron-up dropdown__arrow"></i>
+                        
+
+                        <input type="checkbox" class="dropdown__check">
+                    </a>
+
+                    <div class="dropdown__content">
+
+                        <ul class="dropdown__sub">
+
+                            <li class="dropdown__li">
+                                <a href="#" class="dropdown__anchor">autonomos</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="#" class="dropdown__anchor">Pymes</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="#" class="dropdown__anchor">Gestorias & Asesorias</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </li>
+
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        
+                        <span class="dropdown__span">funcionalidades</span>
+                        
+                        <i class="fa-solid fa-chevron-up dropdown__arrow"></i>
+                        
+
+                        <input type="checkbox" class="dropdown__check">
+                    </a>
+
+                    <div class="dropdown__content">
+
+                        <ul class="dropdown__sub">
+
+                            <li class="dropdown__li">
+                                <a href="#" class="dropdown__anchor">Facturas</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="#" class="dropdown__anchor">Presupuestos</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="#" class="dropdown__anchor">enviar ticket</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </li>
+                <li class="dropdown__list">
+                    <a href="price.html" class="dropdown__link">
+                        
+                        <span class="dropdown__span">Precios</span>
+                    </a>
+                
+                </li>
+
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        
+                        <span class="dropdown__span">Recursos</span>
+                        
+                        <i class="fa-solid fa-chevron-up dropdown__arrow"></i>
+                        
+
+                        <input type="checkbox" class="dropdown__check">
+                    </a>
+
+                    <div class="dropdown__content">
+
+                        <ul class="dropdown__sub">
+
+                            <li class="dropdown__li">
+                                <a href="#" class="dropdown__anchor">Blog</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="#" class="dropdown__anchor">Plantillas Facturas</a>
+                            </li>
+                            <li class="dropdown__li">
+                                <a href="#" class="dropdown__anchor">Asesor IA</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </li>
+
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        
+                        <span class="dropdown__span">Ayuda</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
     <div class="modal-overlay"></div>
 
         <div class="wrapper">
@@ -130,7 +222,7 @@
             <label for="btn-modal"><i class="fa-solid fa-xmark"></i></label>
         </div>
         <h2>Asesor Chatbot</h2>
-        <p>Hola<br>Soy Juanjo, tu asesor personal.<br>Respondere a todas tus dudas sobre tramites.<br>En que te puedo ayudar?</p>
+        <p>Hola<br>Soy Chatbot, tu asesor personal.<br>Respondere a todas tus dudas sobre tramites.<br>En que te puedo ayudar?</p>
         <input type="text">
  
     </div>

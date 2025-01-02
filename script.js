@@ -17,4 +17,31 @@ btnPopup.addEventListener("click", ()=>{
 iconClose.addEventListener("click", ()=>{
     wrapper.classList.remove("active-popup");
 })
+// script.js actualizado para manejar el toggling del menú
+document.addEventListener("DOMContentLoaded", () => {
+    const menuIcon = document.getElementById("menu-icon");
+    const closeIcon = document.getElementById("close-icon");
+    const menu = document.getElementById("menu");
 
+    // Mostrar el menú
+    menuIcon.addEventListener("click", () => {
+        menu.classList.add("menu-visible");
+        menu.classList.remove("menu-hidden");
+        menuIcon.style.display = "none";
+        closeIcon.style.display = "block";
+    });
+
+    // Ocultar el menú
+    closeIcon.addEventListener("click", () => {
+        menu.classList.add("menu-hidden");
+        menu.classList.remove("menu-visible");
+        menuIcon.style.display = "block";
+        closeIcon.style.display = "none";
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+
+    // Asegura que el checkbox esté desmarcado al recargar la página
+    menuToggle.checked = false;
+});
