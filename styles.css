@@ -54,6 +54,7 @@ header::before{
     color: #fff;
     user-select: none;
     margin-right: auto;
+    text-decoration: none;
     
     
 }
@@ -571,7 +572,7 @@ header::before{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 1;
+    
 }
 .sesgouno{
     position: absolute;
@@ -588,7 +589,8 @@ header::before{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.5;
+    
+    
 }
 .sesgodos{
     position: absolute;
@@ -597,6 +599,14 @@ header::before{
     border-width: 15vh 100vw 0 0;
     border-style: solid;
     border-color: #2b2929 transparent transparent transparent;
+}
+@media (max-width: 991px){
+    .sesgodos{
+        border-width: 5vh 100vw 0 0;
+    }
+    .sesgouno{
+        border-width: 5vh 0 0 100vw;
+    }
 }
 .home{
 
@@ -822,5 +832,51 @@ header::before{
     .chatbot .content img {
         margin-top: 15px; /* Ajusta el margen */
     }
+}
+.services{
+    position: relative;
+    display: flex;
+    margin: 20px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+.container1{
+    background-color: rgba(158, 126, 126, 0);
+}
+.container1 h1{
+    text-align: center;
+    font-size: clamp(24px, 4vw + 1rem, 48px);
+    padding-bottom: 10px;
+    color: #fff;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.034);
+}
+.container1 p{
+    color: hsl(0, 0%, 85%);
+}
+.container1 i{
+    font-size: 40px;
+    color: #fff;
+}
+.container1 h3{
+    color: #fff;
+}
+.container1 .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 15px;
+}
+.container1 .box-container .box{
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 10px;
+    
+    border-radius: 15px ;
+    background: #ffffff00;
+    text-align: center;
+    padding: 30px 20px;
+}
+.container1 .box-container .box h3{
+    margin: 20px 0;
 }
 
