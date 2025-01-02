@@ -45,3 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Asegura que el checkbox esté desmarcado al recargar la página
     menuToggle.checked = false;
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const faqs = document.querySelectorAll(".faq");
+
+    faqs.forEach(faq => {
+        faq.addEventListener("click", () => {
+            faq.classList.toggle("active");
+        });
+    });
+});
