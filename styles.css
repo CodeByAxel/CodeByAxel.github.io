@@ -13,12 +13,14 @@ body{
     background-position: center;
 }
 section {
+
     width: 100%; /* Ocupa todo el ancho */
     
 }
 section .content{
     max-width: 1200px; /* Limita el ancho máximo */
     width: 100%; /* Se adapta al contenedor */
+
 }
 
 
@@ -561,9 +563,10 @@ header::before{
     display: block; /* Se muestra solo cuando el modal está activo */
 }
 .sec{
+    padding: 20px 0 ;
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
 }
 .uno{
@@ -834,12 +837,14 @@ header::before{
     }
 }
 .services{
-    position: relative;
+   
     display: flex;
     margin: 20px 0;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+    max-width: 100%; /* Evita que se expanda horizontalmente */
+    max-height: 100%;
     
 }
 .container1{
@@ -864,8 +869,9 @@ header::before{
 }
 .container1 .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
+ 
 }
 .container1 .box-container .box{
     backdrop-filter: blur(10px);
@@ -878,5 +884,13 @@ header::before{
 }
 .container1 .box-container .box h3{
     margin: 20px 0;
+}
+@media (max-width: 991px) {
+    .container1{
+        padding: 20px;
+
+        
+    }
+    
 }
 
